@@ -63,7 +63,7 @@
 		</div>
 	</div>
 	<div class="info">
-		<p id="name">adsfsf</p>
+		匹配得分：<p id="name">adsfsf</p>
 	</div>
  
  
@@ -100,7 +100,7 @@
         var saveImg = canvas.toDataURL('image/png');
  
         $.ajax({
-            url: "Login",
+            url: "face",
             type: 'post',
             data: {"saveImg":saveImg.substring(22)},
             success: function (data) {
@@ -120,7 +120,7 @@
     	if(lo){
     		return 0;
     	}else{
-    		setTimeout(search,1000);
+    		setTimeout(search,5000);
     	}
     }
     
