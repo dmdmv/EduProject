@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "D:\dtd\mybatis-3-mapper.dtd" >
+<mapper namespace="com.edu.dao.UserDao">
+	<resultMap type="com.edu.pojo.User" id="user">
+		<id column="user_id" property="id"/>
+		<result column="user_name" property="username"/>
+	</resultMap>
+
+	<select id="findByUsername"  resultMap="user">
+		select * from user where user_name =#{username}
+	</select>
+</mapper>

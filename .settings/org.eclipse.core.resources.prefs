@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/com/baidu/aip/auth/CloudAuth.java=UTF-8
+encoding//src/com/baidu/aip/client/BaseClient.java=UTF-8
+encoding//src/com/baidu/aip/face/AipFace.java=UTF-8
+encoding//src/com/baidu/aip/util/FileUtil.java=UTF-8
+encoding//src/com/baidu/aip/util/GsonUtils.java=UTF-8
+encoding//src/com/baidu/aip/util/HttpUtil.java=UTF-8
