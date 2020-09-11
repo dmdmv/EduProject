@@ -11,18 +11,18 @@ import java.util.*;
 * 人脸对比
 */
 public class FaceMatch {
-    public static String faceMatch() {
+    public static String faceMatch(String face1) {
         // 请求url
         String url = "https://aip.baidubce.com/rest/2.0/face/v3/match";
         try {
         	List images = new ArrayList<>();
         	
-        	byte[] p1 = FileUtil.readFileByBytes("D:\\TianRuanRelative\\Test\\test1.jpg");
-        	byte[] p2 = FileUtil.readFileByBytes("D:\\TianRuanRelative\\Test\\test2.jpg");
-        	String t1 = Base64Util.encode(p1);
+        	//byte[] p1 = b;
+        	byte[] p2 = FileUtil.readFileByBytes("D:\\TianRuanRelative\\Test\\test5.jpg");
+        	//String t1 = Base64Util.encode(p1);
         	String t2 = Base64Util.encode(p2);
         	Map map = new HashMap();
-        	map.put("image", t1);
+        	map.put("image", face1);
         	map.put("image_type","BASE64");
         	map.put("face_type","LIVE");
         	map.put("quality_control","LOW");
@@ -51,7 +51,7 @@ public class FaceMatch {
     }
 
     public static void main(String[] args) {
-        FaceMatch.faceMatch();
+    //    FaceMatch.faceMatch();
 //    	String auth = AuthService.getAuth();
 //    	System.out.println(auth);
     }
