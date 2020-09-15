@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,22 +34,32 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right mainNav">
-					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="courses.jsp">Courses</a></li>
-					<li><a href="price.jsp">Price</a></li>
-					<li><a href="videos.jsp">Videos</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="sidebar-right.jsp">Right Sidebar</a></li>
-							<li><a href="#">Dummy Link1</a></li>
-							<li><a href="#">Dummy Link2</a></li>
-							<li><a href="#">Dummy Link3</a></li>
-						</ul>
-					</li>
-					<li><a href="contact.jsp">Contact</a></li>
-
+					<li class="active"><a href="index.jsp">首页</a></li>
+					<li><a href="about.html">老师专区</a></li>
+					<li><a href="courses.jsp">大学生专区</a></li>
+					<!-- <li><a href="price.jsp">Price</a></li> -->
+					<li><a href="videos.jsp">视频</a></li>
+					<%-- <c:choose>
+						<c:when test="${user!=null}"> --%>
+							<li>
+								<a href="" id="user">
+									<span>
+										<img id="am-png" src="${userimgpath}" alt="用户头像" />
+									</span>
+									<span>用户名</span>
+								</a>
+							</li>
+					<%-- 	</c:when>
+						<c:otherwise> --%>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">登录注册<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">登录</a></li>
+									<li><a href="#">注册</a></li>
+								</ul>
+							</li>
+					<%-- 	</c:otherwise>
+					</c:choose> --%>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
